@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/prompt", async (req, res) => {
+  console.log(req.body,"/prompt request")
   try {
     let result = await GPT(req.body.prompt);
     res.send(result);
